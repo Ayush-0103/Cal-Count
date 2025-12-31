@@ -3,33 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CalCount – README</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1, h2, h3 {
-      color: #2e7d32;
-    }
-    code, pre {
-      background: #f5f5f5;
-      padding: 8px;
-      border-radius: 4px;
-      display: block;
-      overflow-x: auto;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    hr {
-      margin: 40px 0;
-    }
-  </style>
-</head>
+  
 <body>
 
   <h1>CalCount</h1>
