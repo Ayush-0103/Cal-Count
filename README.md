@@ -1,84 +1,112 @@
-CalCount
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CalCount – README</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      line-height: 1.6;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #2e7d32;
+    }
+    code, pre {
+      background: #f5f5f5;
+      padding: 8px;
+      border-radius: 4px;
+      display: block;
+      overflow-x: auto;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    hr {
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
 
-CalCount is a lightweight calorie and nutrition estimation app that helps users quickly understand the nutritional value of their meals. It focuses on simplicity, speed, and clarity, making calorie awareness effortless without manual tracking or complex inputs.
+  <h1>CalCount</h1>
 
-Features
+  <p>
+    CalCount is a lightweight calorie and nutrition estimation app that helps users
+    quickly understand the nutritional value of their meals. It focuses on simplicity,
+    speed, and clarity, making calorie awareness effortless without manual tracking
+    or complex inputs.
+  </p>
 
-Calorie estimation for meals and dishes
+  <hr />
 
-Macronutrient breakdown (protein, carbohydrates, fats)
+  <h2>Features</h2>
+  <ul>
+    <li>Calorie estimation for meals and dishes</li>
+    <li>Macronutrient breakdown (protein, carbohydrates, fats)</li>
+    <li>AI-powered nutrition analysis</li>
+    <li>Automated workflows using n8n</li>
+    <li>Clean and easy-to-use interface</li>
+  </ul>
 
-AI-powered nutrition analysis
+  <hr />
 
-Automated workflows using n8n
+  <h2>How It Works (n8n + AI)</h2>
+  <p>CalCount uses <strong>n8n</strong> as the core automation and AI orchestration platform:</p>
+  <ol>
+    <li>User submits a meal (text or image)</li>
+    <li>Request is sent to an n8n workflow</li>
+    <li>n8n’s AI Agent node processes the input</li>
+    <li>A connected LLM model (via OpenRouter / OpenAI / Anthropic) analyzes the meal</li>
+    <li>Output is validated using the Structured Output Parser</li>
+    <li>Structured nutrition data is returned to the application</li>
+  </ol>
 
-Clean and easy-to-use interface
+  <hr />
 
-How It Works (n8n + AI)
+  <h2>Use Case</h2>
+  <p>
+    CalCount is designed for users who want quick calorie awareness without maintaining
+    detailed food logs. It helps users:
+  </p>
+  <ul>
+    <li>Understand calorie intake</li>
+    <li>Make healthier food choices</li>
+    <li>Balance macronutrients in daily meals</li>
+  </ul>
 
-CalCount uses n8n as the core automation and AI orchestration platform.
+  <hr />
 
-User submits a meal (text or image)
+  <h2>Tech Stack</h2>
+  <ul>
+    <li>Frontend: HTML / CSS / JavaScript (or React)</li>
+    <li>Automation & AI Orchestration: n8n</li>
+    <li>AI Models: LLMs via OpenRouter / OpenAI / Anthropic</li>
+    <li>Validation: n8n Structured Output Parser</li>
+    <li>Deployment: Web application</li>
+  </ul>
 
-Request is sent to an n8n workflow
+  <hr />
 
-n8n’s AI Agent node processes the input
-
-A connected LLM model (via OpenRouter / OpenAI / Anthropic) analyzes the meal
-
-Output is validated using Structured Output Parser
-
-Structured nutrition data is returned to the app
-
-This setup ensures reliable, consistent, and schema-safe nutrition outputs.
-
-Use Case
-
-CalCount is designed for users who want quick calorie awareness without maintaining detailed food logs. It helps users:
-
-Understand calorie intake
-
-Make healthier food choices
-
-Balance macronutrients in daily meals
-
-Tech Stack
-
-Frontend: HTML / CSS / JavaScript (or React)
-
-Automation & AI Orchestration: n8n
-
-AI Models: LLMs via OpenRouter / OpenAI / Anthropic
-
-Validation: n8n Structured Output Parser
-
-Deployment: Web application
-
-Setup
-
-Clone the repository
-
+  <h2>Setup</h2>
+  <pre>
 git clone https://github.com/your-username/calcount.git
-
-
-Navigate to the project directory
-
 cd calcount
-
-
-Install dependencies
-
 npm install
-
-
-Start the application
-
 npm run dev
+  </pre>
 
+  <p>
+    Run n8n locally or connect to n8n Cloud and import the CalCount workflow.
+  </p>
 
-Run n8n locally or connect to n8n Cloud and import the CalCount workflow
+  <hr />
 
-Project Structure
+  <h2>Project Structure</h2>
+  <pre>
 CalCount/
 ├── public/
 │   └── cc.png
@@ -90,22 +118,31 @@ CalCount/
 │   └── calcount-workflow.json
 ├── index.html
 ├── package.json
-└── README.md
+└── README.html
+  </pre>
 
-Future Enhancements
+  <hr />
 
-Image-based food analysis using vision models
+  <h2>Future Enhancements</h2>
+  <ul>
+    <li>Image-based food analysis using vision models</li>
+    <li>Micronutrient insights</li>
+    <li>Meal history and trend tracking</li>
+    <li>Daily calorie goals and personalization</li>
+  </ul>
 
-Micronutrient insights
+  <hr />
 
-Meal history and trend tracking
+  <h2>Disclaimer</h2>
+  <p>
+    CalCount provides estimated nutritional values for informational purposes only.
+    It is not intended as medical or dietary advice.
+  </p>
 
-Daily calorie goals and personalization
+  <hr />
 
-Disclaimer
+  <h2>License</h2>
+  <p>MIT License</p>
 
-CalCount provides estimated nutritional values for informational purposes only. It is not intended as medical or dietary advice.
-
-License
-
-MIT License
+</body>
+</html>
