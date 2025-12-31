@@ -14,6 +14,12 @@
     speed, and clarity, making calorie awareness effortless without manual tracking
     or complex inputs.
   </p>
+  <p>
+    <strong>Live Application:</strong>
+    <a href="https://cal-count-rho.vercel.app/" target="_blank">
+      https://cal-count-rho.vercel.app/
+    </a>
+  </p>
 
   <hr />
 
