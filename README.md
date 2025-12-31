@@ -1,73 +1,111 @@
-# Welcome to your Lovable project
+CalCount
 
-## Project info
+CalCount is a lightweight calorie and nutrition estimation app that helps users quickly understand the nutritional value of their meals. It focuses on simplicity, speed, and clarity, making calorie awareness effortless without manual tracking or complex inputs.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Features
 
-## How can I edit this code?
+Calorie estimation for meals and dishes
 
-There are several ways of editing your application.
+Macronutrient breakdown (protein, carbohydrates, fats)
 
-**Use Lovable**
+AI-powered nutrition analysis
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Automated workflows using n8n
 
-Changes made via Lovable will be committed automatically to this repo.
+Clean and easy-to-use interface
 
-**Use your preferred IDE**
+How It Works (n8n + AI)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+CalCount uses n8n as the core automation and AI orchestration platform.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+User submits a meal (text or image)
 
-Follow these steps:
+Request is sent to an n8n workflow
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+n8n’s AI Agent node processes the input
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+A connected LLM model (via OpenRouter / OpenAI / Anthropic) analyzes the meal
 
-# Step 3: Install the necessary dependencies.
-npm i
+Output is validated using Structured Output Parser
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Structured nutrition data is returned to the app
+
+This setup ensures reliable, consistent, and schema-safe nutrition outputs.
+
+Use Case
+
+CalCount is designed for users who want quick calorie awareness without maintaining detailed food logs. It helps users:
+
+Understand calorie intake
+
+Make healthier food choices
+
+Balance macronutrients in daily meals
+
+Tech Stack
+
+Frontend: HTML / CSS / JavaScript (or React)
+
+Automation & AI Orchestration: n8n
+
+AI Models: LLMs via OpenRouter / OpenAI / Anthropic
+
+Validation: n8n Structured Output Parser
+
+Deployment: Web application
+
+Setup
+
+Clone the repository
+
+git clone https://github.com/your-username/calcount.git
+
+
+Navigate to the project directory
+
+cd calcount
+
+
+Install dependencies
+
+npm install
+
+
+Start the application
+
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Run n8n locally or connect to n8n Cloud and import the CalCount workflow
 
-**Use GitHub Codespaces**
+Project Structure
+CalCount/
+├── public/
+│   └── cc.png
+├── src/
+│   ├── components/
+│   ├── pages/
+│   └── utils/
+├── n8n/
+│   └── calcount-workflow.json
+├── index.html
+├── package.json
+└── README.md
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Future Enhancements
 
-## What technologies are used for this project?
+Image-based food analysis using vision models
 
-This project is built with:
+Micronutrient insights
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Meal history and trend tracking
 
-## How can I deploy this project?
+Daily calorie goals and personalization
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Disclaimer
 
-## Can I connect a custom domain to my Lovable project?
+CalCount provides estimated nutritional values for informational purposes only. It is not intended as medical or dietary advice.
 
-Yes, you can!
+License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+MIT License
