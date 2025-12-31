@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Fresh health-focused palette */
+    --background: 45 30% 98%;
+    --foreground: 160 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 15%;
+
+    /* Fresh green primary */
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Warm cream secondary */
+    --secondary: 45 40% 94%;
+    --secondary-foreground: 160 30% 20%;
+
+    --muted: 45 20% 92%;
+    --muted-foreground: 160 10% 45%;
+
+    /* Coral accent for energy */
+    --accent: 15 90% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 20% 88%;
+    --input: 160 20% 88%;
+    --ring: 160 84% 39%;
+
+    --radius: 1rem;
+
+    /* Custom colors for macros */
+    --protein: 280 70% 55%;
+    --carbs: 45 95% 55%;
+    --fat: 15 90% 60%;
+    --calories: 160 84% 39%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(160 84% 95%) 0%, hsl(45 40% 96%) 50%, hsl(15 90% 97%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(45 30% 99%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(170 75% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(15 90% 60%) 0%, hsl(25 95% 55%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(160 30% 15% / 0.08);
+    --shadow-md: 0 8px 24px -6px hsl(160 30% 15% / 0.12);
+    --shadow-lg: 0 16px 48px -12px hsl(160 30% 15% / 0.18);
+    --shadow-glow: 0 0 40px hsl(160 84% 39% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 160 30% 8%;
+    --foreground: 45 30% 95%;
+
+    --card: 160 25% 12%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 160 25% 12%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 160 84% 45%;
+    --primary-foreground: 160 30% 8%;
+
+    --secondary: 160 20% 18%;
+    --secondary-foreground: 45 30% 90%;
+
+    --muted: 160 15% 20%;
+    --muted-foreground: 45 20% 60%;
+
+    --accent: 15 90% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 15% 22%;
+    --input: 160 15% 22%;
+    --ring: 160 84% 45%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(160 30% 10%) 0%, hsl(160 25% 8%) 50%, hsl(160 20% 6%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(160 25% 14%) 0%, hsl(160 25% 10%) 100%);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Macro color utilities */
+.bg-protein {
+  background-color: hsl(var(--protein));
+}
+
+.bg-carbs {
+  background-color: hsl(var(--carbs));
+}
+
+.bg-fat {
+  background-color: hsl(var(--fat));
+}
+
+.bg-calories {
+  background-color: hsl(var(--calories));
+}
+
+.text-protein {
+  color: hsl(var(--protein));
+}
+
+.text-carbs {
+  color: hsl(var(--carbs));
+}
+
+.text-fat {
+  color: hsl(var(--fat));
+}
+
+.text-calories {
+  color: hsl(var(--calories));
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slide-up {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes progress-fill {
+  from { width: 0%; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+.animate-progress-fill {
+  animation: progress-fill 1s ease-out forwards;
+}
